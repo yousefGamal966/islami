@@ -1,0 +1,25 @@
+{
+  "app_name": "إسلامي",
+  "quran": "القرآن",
+  "hadeth": "الاحاديث",
+  "praise": "تسبيح",
+  "radio": "الإذاعه",
+  "azkar": "الأذكار",
+  "settings": "الاعدادات",
+  "light": "فاتح",
+  "dark": "داكن",
+  "english": "الأنجليزية",
+  "arabic": "العربية",
+  "number_of_praises": "عدد التسبيحات",
+  "hadeth_number": "رقم الحديث",
+  "chapter_name": "أسم السورة",
+  "quran_radio": "إذاعة القرآن الكريم",
+  "pray_azkar": "أذكار الصلاة",
+  "night_azkar": "أذكار الليل",
+  "day_azkar": "أذكار النهار",
+  "language": "اللغة",
+  "theme": "الوضع"
+
+
+
+}
