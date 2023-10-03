@@ -4,7 +4,6 @@
   "hadeth": "Hadeth",
   "praise": "Praise",
   "radio": "Radio",
-  "azkar": "Azkar",
   "settings": "Settings",
   "light": "Light",
   "dark": "Dark",
@@ -14,9 +13,6 @@
   "hadeth_number": "Hadeth Number",
   "chapter_name": "Chapter Name",
   "quran_radio": "Quran Radio",
-  "pray_azkar": "Pray Azkar",
-  "night_azkar": "Night Azkar",
-  "day_azkar": "Day Azkar",
   "language": "Language",
   "theme": "Theme"
 

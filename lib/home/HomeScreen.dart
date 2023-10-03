@@ -23,7 +23,6 @@ class _HomeScreenState extends State<HomeScreen> {
     HadethTab(),
     SebhaTab(),
     RadioTab(),
-    // AzkarTab(),
     SettingsTab()
   ];
 
@@ -69,10 +68,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 backgroundColor: Theme.of(context).primaryColor,
                 icon: ImageIcon(AssetImage('assets/images/radio.png')),
                 label: AppLocalizations.of(context)!.radio),
-            // BottomNavigationBarItem(
-            //     backgroundColor: Theme.of(context).primaryColor,
-            //     icon: ImageIcon(AssetImage('assets/images/azkar_icon.png')),
-            //     label: AppLocalizations.of(context)!.azkar),
+
             BottomNavigationBarItem(
                 backgroundColor: Theme.of(context).primaryColor,
                 icon: Icon(Icons.settings),

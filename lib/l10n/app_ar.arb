@@ -4,7 +4,6 @@
   "hadeth": "الاحاديث",
   "praise": "تسبيح",
   "radio": "الإذاعه",
-  "azkar": "الأذكار",
   "settings": "الاعدادات",
   "light": "فاتح",
   "dark": "داكن",
@@ -14,9 +13,6 @@
   "hadeth_number": "رقم الحديث",
   "chapter_name": "أسم السورة",
   "quran_radio": "إذاعة القرآن الكريم",
-  "pray_azkar": "أذكار الصلاة",
-  "night_azkar": "أذكار الليل",
-  "day_azkar": "أذكار النهار",
   "language": "اللغة",
   "theme": "الوضع"
 
