@@ -11,7 +11,7 @@ class ThemeBottomSheet extends StatefulWidget {
 class _ThemeBottomSheetState extends State<ThemeBottomSheet> {
   @override
   Widget build(BuildContext context) {
-    var settingsProvider = Provider.of<SettingsProvider>(context);
+    var provider = Provider.of<SettingsProvider>(context);
     return Container(
       width: double.infinity,
       padding: EdgeInsets.symmetric(horizontal: 15, vertical: 10),
@@ -20,9 +20,9 @@ class _ThemeBottomSheetState extends State<ThemeBottomSheet> {
         children: [
           InkWell(
             onTap: (){
-              settingsProvider.changeTheme(ThemeMode.light);
+              provider.changeTheme(ThemeMode.light);
             },
-              child: settingsProvider.isDarkEnabled()?
+              child: provider.isDarkEnabled()?
               getUnselectedItem(
                   unselectedThemeName: AppLocalizations.of(context)!.light):
               getSelectedItem(selectedThemeName: AppLocalizations.of(context)!.light)),
@@ -31,10 +31,10 @@ class _ThemeBottomSheetState extends State<ThemeBottomSheet> {
           ),
           InkWell(
             onTap: (){
-              settingsProvider.changeTheme(ThemeMode.dark);
+              provider.changeTheme(ThemeMode.dark);
             },
               child:
-              settingsProvider.isDarkEnabled()?
+              provider.isDarkEnabled()?
               getSelectedItem(selectedThemeName: AppLocalizations.of(context)!.dark):
               getUnselectedItem(
                   unselectedThemeName: AppLocalizations.of(context)!.dark)
@@ -47,12 +47,15 @@ class _ThemeBottomSheetState extends State<ThemeBottomSheet> {
   }
 
   Widget getSelectedItem({required String selectedThemeName}) {
+    var provider = SettingsProvider();
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         Text(
           selectedThemeName,
-          style: TextStyle(fontSize: 20, color: Theme.of(context).dividerColor),
+          style: TextStyle(fontSize: 25, color: Theme.of(context).dividerColor
+            ,fontFamily: provider.changeLanguageTheme(),fontWeight: FontWeight.bold
+          ),
         ),
         Icon(
           Icons.check,
@@ -63,11 +66,12 @@ class _ThemeBottomSheetState extends State<ThemeBottomSheet> {
   }
 
   Widget getUnselectedItem({required String unselectedThemeName}) {
+    var provider = SettingsProvider();
     return Container(
       width: double.infinity,
       child: Text(unselectedThemeName,
           style: TextStyle(
-            fontSize: 20,
+            fontSize: 25,fontFamily: provider.changeLanguageTheme(),
           )),
     );
   }

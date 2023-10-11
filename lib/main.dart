@@ -8,10 +8,15 @@ import 'package:islami/home/Splash.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:islami/providers/SettingsProvider.dart';
 import 'package:provider/provider.dart';
-void main() {
+void main()async {
+  WidgetsFlutterBinding.ensureInitialized();
+  var provider =  SettingsProvider();
+   await provider.loadThemeData();
+   await provider.loadLocale();
   runApp(
+
       ChangeNotifierProvider(
-        create:(buildContext)=>SettingsProvider(),
+        create:(buildContext)=>provider,
           child:MyApp()));
 }
 

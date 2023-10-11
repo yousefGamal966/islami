@@ -41,7 +41,7 @@ class _SettingsTabState extends State<SettingsTab> {
         ),
         SizedBox(height: 20,),
         Text(AppLocalizations.of(context)!.language,style: TextStyle(
-            fontSize: 25
+            fontSize: 25,fontFamily: provider.changeLanguageTheme(),
         ),),
 
         InkWell(

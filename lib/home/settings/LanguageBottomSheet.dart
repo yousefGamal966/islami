@@ -45,21 +45,29 @@ class _LanguageBottomSheetState extends State<LanguageBottomSheet> {
   }
 
   Widget getSelectedItem({required String selectedLanguageName}){
+    var provider = SettingsProvider();
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        Text(selectedLanguageName,style:Theme.of(context).textTheme.titleMedium?.copyWith(color:Theme.of(context).dividerColor)
+        Text(selectedLanguageName,style:TextStyle(
+    fontFamily: provider.changeLanguageTheme(),
+          fontSize: 25,color: Theme.of(context).dividerColor,fontWeight: FontWeight.bold
+        )),
 
-        ),
+
         Icon(Icons.check,color: Theme.of(context).dividerColor,)
       ],
     );
 
   }
   Widget getUnselectedItem({required String unselectedLanguageName}){
+    var provider = SettingsProvider();
     return Row(
       children: [
-        Text(unselectedLanguageName,style:Theme.of(context).textTheme.labelMedium),
+        Text(unselectedLanguageName,style:TextStyle(
+      fontSize: 20
+    ,fontFamily: provider.changeLanguageTheme(),
+        )),
       ],
     );
   }

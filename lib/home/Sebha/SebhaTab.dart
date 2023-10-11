@@ -84,7 +84,7 @@ class _SebhaTabState extends State<SebhaTab> {
           SizedBox(
             height: 10,
           ),
-          Text(AppLocalizations.of(context)!.number_of_praises, style: TextStyle(fontSize: 25)),
+          Text(AppLocalizations.of(context)!.number_of_praises, style: TextStyle(fontSize: 25,fontFamily: provider.changeLanguageTheme(),)),
           SizedBox(
             height: 10,
           ),

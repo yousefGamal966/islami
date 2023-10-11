@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:islami/home/Quran/ChapterTitleWidget.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:islami/providers/SettingsProvider.dart';
+import 'package:provider/provider.dart';
 import '../../MyThemeData.dart';
 
 class QuranTab extends StatelessWidget {
@@ -123,6 +125,7 @@ class QuranTab extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var provider = Provider.of<SettingsProvider>(context);
     return Column(
       children: [
         Image.asset('assets/images/quranHead.png'),
@@ -136,7 +139,7 @@ class QuranTab extends StatelessWidget {
                     BorderSide(color: Theme.of(context).dividerColor, width: 3))),
             child: Text(
                 AppLocalizations.of(context)!.chapter_name,
-              style: TextStyle(fontSize: 23),
+              style: TextStyle(fontSize: 23,fontFamily: provider.changeLanguageTheme(),),
             )),
         Expanded(
           child: ListView.separated(

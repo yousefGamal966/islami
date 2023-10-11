@@ -97,9 +97,9 @@ flutter:
     - family: Quran
       fonts:
         - asset: assets/fonts/Al-QuranAlKareem.ttf
-    - family: English_Quran
+    - family: forQuran
       fonts:
-        - asset: assets/fonts/RobotoCondensed-Regular.ttf
+        - asset: assets/fonts/forQuran.ttf
 
   # fonts:
   #   - family: Schyler
